@@ -15,7 +15,6 @@ namespace CSharpCodeReview1
             set
             {
                 _birthDate = value;
-                Age = CalculateAge();
             }
         }
 
@@ -40,7 +39,7 @@ namespace CSharpCodeReview1
 
         public static double TaxRate => 0.21;
 
-        public int Age { get; private set; }
+        public string FullName { get; private set; }
 
         private static int nextID = 0;
 
@@ -52,6 +51,8 @@ namespace CSharpCodeReview1
             JobTitle = jobTitle;
             BirthDate = birthDate;
             MonthlySalary = monthlySalary;
+
+            FullName = firstName + lastName;
         }
 
         public Employee() { }
@@ -66,15 +67,7 @@ namespace CSharpCodeReview1
                 return Employee.nextID++;
             }
         }
-
-        /// <summary>
-        /// Method to calculate age of employee in days
-        /// </summary>
-        /// <returns>Age of employee in days as int</returns>
-        private int CalculateAge()
-        {
-            // todo: complete this function
-        }
+        
 
         /// <summary>
         /// Method to count sum of 12 salaries (one per month) of the employee

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 
 namespace CSharpCodeReview1
 {
-    public class Boss : Employee
+    public class Manager : Employee
     {
         private const int MONTHS_OF_YEAR = 12;
         private double perEmployeeSalaryBonus;
@@ -15,12 +15,12 @@ namespace CSharpCodeReview1
         /// Constructor for Boss class.
         /// </summary>
         /// <param name="department">Department under boss control.</param>
-        public Boss()
+        public Manager()
         {
             employees = new HashSet<Employee>();
         }
 
-        public Boss(int id, string firstName, string lastName, string job, DateTime birthDate, double monthlySalary) :
+        public Manager(int id, string firstName, string lastName, string job, DateTime birthDate, double monthlySalary) :
             base(id, firstName, lastName, job, birthDate, monthlySalary)
         {
             employees = new HashSet<Employee>();
